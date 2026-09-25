@@ -5,7 +5,6 @@
 ---
 
 ### 👩‍💻 Integrantes
-- **Sarah Gallegos Rentería**
 - **Arely Rodríguez Vargas**
 - **Eder Nieto Aguilar**
 
