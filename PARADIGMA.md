@@ -1,37 +1,49 @@
+
 # PARADIGMA DE INGENIERÍA DE SOFTWARE DEL PROYECTO
 
-**Asignatura:** Ingeniería de Software | **Carrera:** Ingeniería en Datos e Inteligencia Artificial  
-**Proyecto:** UPG-LIFE (Plataforma de Mapeo Interactivo y Monitoreo Ambiental)  
+**Asignatura:** Ingeniería de Software  
+**Carrera:** Ingeniería en Datos e Inteligencia Artificial  
+**Proyecto:** Sistema de Gestión y Seguimiento de Estadías Profesionales  
 **Integrantes:** Arely Rodríguez Vargas, Eder Nieto Aguilar  
 
 ## 1. MÉTODOS (Técnicas Sistemáticas de Desarrollo)
-- **Modelo de Proceso:** Desarrollo Incremental y Ágil (basado en Sommerville Cap. 2 y 3), estructurado en iteraciones para la integración progresiva del hardware IoT (ESP32) y la plataforma web.
-- **Técnicas de Análisis y Especificación:** Historias de Usuario orientadas a la navegación pública sin registro y a la visualización de métricas ambientales (humedad, ruido y temperatura).
-- **Técnicas de Validación:** Pruebas Unitarias para la ingesta/procesamiento de datos e interfaz pública, sumado a Revisiones e Inspecciones de pares del código y firmware.
+
+- **Modelo de Proceso:** Desarrollo incremental mediante un enfoque híbrido basado en Scrum, organizando el trabajo en Sprints para desarrollar las funciones del sistema de manera progresiva.
+
+- **Técnicas de Análisis y Especificación:** Historias de usuario para definir las necesidades de estudiantes y asesores académicos, incluyendo el registro de estadías, las actividades, la entrega de evidencias y la revisión de reportes.
+
+- **Técnicas de Validación:** Pruebas unitarias y funcionales para verificar el registro de usuarios, inicio de sesión, almacenamiento de información y revisión de entregas. También se realizarán revisiones de código entre compañeros.
 
 ## 2. HERRAMIENTAS (Soporte Automatizado CASE y Entorno de Desarrollo)
-- **Entorno Integrado (IDE):** Visual Studio Code (v1.85+) con extensiones para desarrollo Web y C++/PlatformIO (ESP32).
-- **Control de Versiones y SCM:** Git CLI local y GitHub Remote Repository.
-- **Analizador Estático de Código (Linter):** Flake8 / Pylint (Python) y ESLint / Cppcheck según el módulo.
-- **Gestión de Tareas:** Tablero Kanban en GitHub Projects.
+
+- **Entorno Integrado (IDE):** Visual Studio Code para desarrollar y organizar los archivos del proyecto.
+
+- **Lenguajes y Tecnologías:** Python con Flask para el funcionamiento del sistema, HTML y CSS para la interfaz web y SQLite para almacenar los datos.
+
+- **Control de Versiones y SCM:** Git y GitHub para registrar los cambios y trabajar de forma colaborativa.
+
+- **Analizador Estático de Código (Linter):** Flake8 o Pylint para revisar el código Python y detectar posibles problemas de estilo.
+
+- **Gestión de Tareas:** GitHub Projects para organizar las historias de usuario, las actividades y el seguimiento de los Sprints.
 
 ## 3. PROCEDIMIENTOS (Estructura y Normativa Organizacional)
-- **Formato de Commits:** Convención Imperativa (`feat:`, `fix:`, `docs:`, `style:`, `refactor:`).
-- **Estrategia de Ramas (Branching):** Prohibido hacer push directo a `main`. Todo cambio se realiza en `feature/*` o `fix/*` y requiere Pull Request.
-- **Política de Code Review:** Todo Pull Request requiere la revisión y aprobación escrita del integrante par antes del Merge.
 
-<!-- IoT & Hardware -->
-![ESP32](https://img.shields.io/badge/ESP32-E6353B?style=for-the-badge&logo=espressif&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+- **Formato de Commits:** Utilizar mensajes descriptivos con las convenciones `feat:`, `fix:`, `docs:`, `style:` y `refactor:`.
 
-<!-- Software & Web -->
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- **Estrategia de Ramas (Branching):** Cada nueva funcionalidad se desarrollará en una rama `feature/` y las correcciones en una rama `fix/`. No se realizarán cambios directamente en `main`.
 
-<!-- Herramientas -->
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+- **Política de Code Review:** Todo Pull Request deberá ser revisado y aprobado por otro integrante del equipo antes de integrarse a la rama principal.
+
+- **Organización del Trabajo:** El equipo utilizará Sprints de dos semanas para organizar las actividades, revisar avances y realizar las mejoras necesarias.
+
+- **Control de Calidad:** Se realizarán pruebas para comprobar que las funciones del sistema trabajen correctamente y que la información de los usuarios esté protegida.
+
+## 4. TECNOLOGÍAS PROPUESTAS
+
+- Python
+- Flask
+- HTML
+- CSS
+- SQLite
+- Visual Studio Code
+- Git y GitHub
