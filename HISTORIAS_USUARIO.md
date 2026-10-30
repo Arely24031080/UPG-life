@@ -1,85 +1,161 @@
+
 # Inventario de Historias de Usuario - Proyecto Final
 
-## Historia de Usuario HU-01: Registro de usuario
+**Proyecto:** Sistema de Gestión y Seguimiento de Estadías Profesionales
 
-* **ID:** HU-01
-* **Nombre:** Registro de usuario
-* **Como:** Usuario
-* **Quiero:** Registrarme en el sistema
-* **Para:** Poder acceder a las funciones disponibles para los usuarios registrados
-* **Estimación (Story Points):** 5
-* **Prioridad:** Alta
-* **Criterios de Aceptación (Gherkin):**
+## HU-01: Registro de usuario
 
-  * **Escenario 1:** **Dado que** el usuario proporciona sus datos correctamente, **Cuando** selecciona la opción de registrarse, **Entonces** el sistema crea su cuenta y muestra un mensaje de registro exitoso.
-  * **Escenario 2:** **Dado que** el usuario proporciona datos incompletos o inválidos, **Cuando** intenta registrarse, **Entonces** el sistema muestra un mensaje indicando los datos que debe corregir.
+- **ID:** HU-01
+- **Nombre:** Registro de usuario
+- **Como:** Estudiante universitario.
+- **Quiero:** Registrarme en el sistema con mis datos personales y académicos.
+- **Para:** Acceder a la plataforma y dar seguimiento a mis estadías profesionales.
+- **Estimación (Story Points):** 5
+- **Prioridad:** Alta
 
-## Historia de Usuario HU-02: Inicio de sesión
+### Criterios de Aceptación
 
-* **ID:** HU-02
-* **Nombre:** Inicio de sesión
-* **Como:** Usuario registrado
-* **Quiero:** Iniciar sesión en el sistema
-* **Para:** Acceder a las funciones disponibles para mi cuenta
-* **Estimación (Story Points):** 3
-* **Prioridad:** Alta
-* **Criterios de Aceptación (Gherkin):**
+**Escenario 1: Registro exitoso**
+- **Dado que** el estudiante ingresa sus datos correctamente,
+- **Cuando** presiona "Registrarse",
+- **Entonces** el sistema guarda la información y muestra un mensaje de confirmación.
 
-  * **Escenario 1:** **Dado que** el usuario tiene credenciales válidas, **Cuando** ingresa su usuario y contraseña, **Entonces** el sistema permite el acceso.
-  * **Escenario 2:** **Dado que** el usuario proporciona credenciales incorrectas, **Cuando** intenta iniciar sesión, **Entonces** el sistema muestra un mensaje de error.
+**Escenario 2: Datos incompletos**
+- **Dado que** el estudiante deja campos obligatorios vacíos,
+- **Cuando** intenta registrarse,
+- **Entonces** el sistema solicita completar la información.
 
-## Historia de Usuario HU-03: Consulta de información
+---
 
-* **ID:** HU-03
-* **Nombre:** Consulta de información
-* **Como:** Usuario
-* **Quiero:** Consultar la información disponible en el sistema
-* **Para:** Encontrar información que necesito
-* **Estimación (Story Points):** 3
-* **Prioridad:** Alta
-* **Criterios de Aceptación (Gherkin):**
+## HU-02: Inicio de sesión
 
-  * **Escenario 1:** **Dado que** el usuario ha ingresado al sistema, **Cuando** selecciona una sección de información, **Entonces** el sistema muestra el contenido correspondiente.
-  * **Escenario 2:** **Dado que** una sección no contiene información disponible, **Cuando** el usuario la consulta, **Entonces** el sistema muestra un mensaje indicando que no hay información disponible.
+- **ID:** HU-02
+- **Nombre:** Inicio de sesión
+- **Como:** Estudiante o asesor académico.
+- **Quiero:** Iniciar sesión con mi correo y contraseña.
+- **Para:** Acceder de manera segura a las funciones correspondientes a mi usuario.
+- **Estimación (Story Points):** 3
+- **Prioridad:** Alta
 
-## Historia de Usuario HU-04: Consulta de perfil
+### Criterios de Aceptación
 
-* **ID:** HU-04
-* **Nombre:** Consulta de perfil
-* **Como:** Usuario registrado
-* **Quiero:** Consultar mi información de perfil
-* **Para:** Verificar mis datos personales registrados
-* **Estimación (Story Points):** 3
-* **Prioridad:** Media
-* **Criterios de Aceptación (Gherkin):**
+**Escenario 1: Acceso exitoso**
+- **Dado que** el usuario tiene una cuenta registrada,
+- **Cuando** ingresa sus datos correctamente,
+- **Entonces** el sistema permite el acceso.
 
-  * **Escenario 1:** **Dado que** el usuario ha iniciado sesión, **Cuando** accede a su perfil, **Entonces** el sistema muestra su información registrada.
-  * **Escenario 2:** **Dado que** el usuario no ha iniciado sesión, **Cuando** intenta acceder al perfil, **Entonces** el sistema solicita que inicie sesión.
+**Escenario 2: Datos incorrectos**
+- **Dado que** el usuario ingresa datos incorrectos,
+- **Cuando** intenta iniciar sesión,
+- **Entonces** el sistema muestra un error y no permite el acceso.
 
-## Historia de Usuario HU-05: Consulta de documentos
+---
 
-* **ID:** HU-05
-* **Nombre:** Consulta de documentos
-* **Como:** Usuario
-* **Quiero:** Consultar los documentos disponibles
-* **Para:** Obtener la información o documentación que necesito
-* **Estimación (Story Points):** 5
-* **Prioridad:** Media
-* **Criterios de Aceptación (Gherkin):**
+## HU-03: Registro de estadía profesional
 
-  * **Escenario 1:** **Dado que** el usuario ha iniciado sesión, **Cuando** selecciona la sección de documentos, **Entonces** el sistema muestra los documentos disponibles.
-  * **Escenario 2:** **Dado que** no existen documentos disponibles, **Cuando** el usuario consulta la sección, **Entonces** el sistema muestra un mensaje indicando que no hay documentos disponibles.
+- **ID:** HU-03
+- **Nombre:** Registro de estadía profesional
+- **Como:** Estudiante universitario.
+- **Quiero:** Registrar la empresa, el proyecto y los asesores asignados.
+- **Para:** Organizar la información de mi estadía profesional.
+- **Estimación (Story Points):** 5
+- **Prioridad:** Alta
 
-## Historia de Usuario HU-06: Consulta de información de contacto
+### Criterios de Aceptación
 
-* **ID:** HU-06
-* **Nombre:** Consulta de contacto
-* **Como:** Usuario
-* **Quiero:** Consultar los datos de contacto disponibles
-* **Para:** Poder comunicarme con la institución
-* **Estimación (Story Points):** 1
-* **Prioridad:** Baja
-* **Criterios de Aceptación (Gherkin):**
+**Escenario 1: Registro exitoso**
+- **Dado que** el estudiante ha iniciado sesión,
+- **Cuando** completa los datos de su estadía y presiona "Guardar",
+- **Entonces** el sistema almacena la información.
 
-  * **Escenario 1:** **Dado que** el usuario accede a la sección de contacto, **Cuando** consulta la información, **Entonces** el sistema muestra los datos de contacto disponibles.
-  * **Escenario 2:** **Dado que** la información de contacto no está disponible, **Cuando** el usuario accede a la sección, **Entonces** el sistema muestra un mensaje indicando que no hay información disponible.
+**Escenario 2: Datos incompletos**
+- **Dado que** el estudiante deja campos obligatorios vacíos,
+- **Cuando** intenta guardar,
+- **Entonces** el sistema solicita completar los datos faltantes.
+
+---
+
+## HU-04: Registro de actividades de estadía
+
+- **ID:** HU-04
+- **Nombre:** Registro de actividades
+- **Como:** Estudiante universitario.
+- **Quiero:** Registrar las actividades realizadas durante mis estadías.
+- **Para:** Llevar un control de mis avances.
+- **Estimación (Story Points):** 5
+- **Prioridad:** Alta
+
+### Criterios de Aceptación
+
+**Escenario 1: Registro exitoso**
+- **Dado que** el estudiante tiene una estadía registrada,
+- **Cuando** ingresa la fecha y descripción de su actividad,
+- **Entonces** el sistema guarda la actividad en su historial.
+
+**Escenario 2: Información incompleta**
+- **Dado que** el estudiante no completa la descripción,
+- **Cuando** intenta guardar,
+- **Entonces** el sistema muestra un mensaje de error.
+
+**Escenario 3: Consulta de actividades**
+- **Dado que** el estudiante registró actividades,
+- **Cuando** consulta su bitácora,
+- **Entonces** el sistema muestra las fechas y descripciones.
+
+---
+
+## HU-05: Entrega de reportes y evidencias
+
+- **ID:** HU-05
+- **Nombre:** Entrega de reportes y evidencias
+- **Como:** Estudiante universitario.
+- **Quiero:** Subir reportes y documentos de mis actividades.
+- **Para:** Permitir que mi asesor revise el trabajo realizado.
+- **Estimación (Story Points):** 5
+- **Prioridad:** Alta
+
+### Criterios de Aceptación
+
+**Escenario 1: Entrega exitosa**
+- **Dado que** el estudiante tiene una estadía registrada,
+- **Cuando** selecciona un archivo válido y presiona "Subir",
+- **Entonces** el sistema guarda el documento.
+
+**Escenario 2: Archivo no permitido**
+- **Dado que** el estudiante selecciona un archivo no permitido,
+- **Cuando** intenta subirlo,
+- **Entonces** el sistema muestra un mensaje de error.
+
+**Escenario 3: Consulta de entregas**
+- **Dado que** el estudiante ya entregó documentos,
+- **Cuando** consulta sus evidencias,
+- **Entonces** el sistema muestra los archivos y sus fechas.
+
+---
+
+## HU-06: Revisión y aprobación de evidencias
+
+- **ID:** HU-06
+- **Nombre:** Revisión y aprobación de evidencias
+- **Como:** Asesor académico.
+- **Quiero:** Revisar y evaluar los reportes de mis estudiantes.
+- **Para:** Aprobar las entregas o solicitar correcciones.
+- **Estimación (Story Points):** 5
+- **Prioridad:** Alta
+
+### Criterios de Aceptación
+
+**Escenario 1: Aprobación**
+- **Dado que** el estudiante envió un reporte,
+- **Cuando** el asesor selecciona "Aprobar",
+- **Entonces** el sistema cambia el estado a "Aprobada".
+
+**Escenario 2: Solicitud de corrección**
+- **Dado que** el asesor identifica errores,
+- **Cuando** escribe observaciones y solicita correcciones,
+- **Entonces** el sistema guarda los comentarios y cambia el estado a "Corrección requerida".
+
+**Escenario 3: Consulta de entregas**
+- **Dado que** el asesor tiene estudiantes asignados,
+- **Cuando** consulta las entregas,
+- **Entonces** el sistema muestra los documentos y sus estados.

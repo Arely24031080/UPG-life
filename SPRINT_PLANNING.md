@@ -1,46 +1,41 @@
-# Sprint Planning - Sprint 1
 
-## 1. Objetivo del Sprint
+# Planificación del Sprint 1 (Sprint Planning)
 
-Implementar las funciones básicas del sistema UPG-life para que los usuarios puedan registrarse, iniciar sesión y consultar información del sistema.
+**Proyecto:** Sistema de Gestión y Seguimiento de Estadías Profesionales
 
-## 2. Historias seleccionadas para el Sprint
+## 1. Meta del Sprint (Sprint Goal)
 
-| ID    | Historia de usuario     | Story Points | Responsable   |
-| ----- | ----------------------- | -----------: | ------------- |
-| HU-01 | Registro de usuario     |            5 | Desarrollador |
-| HU-02 | Inicio de sesión        |            3 | Desarrollador |
-| HU-03 | Consulta de información |            3 | Desarrollador |
-| HU-04 | Consulta de perfil      |            3 | Desarrollador |
+Desarrollar las funciones básicas del sistema para permitir que los estudiantes puedan registrarse, iniciar sesión y registrar la información de sus estadías profesionales.
 
-**Total estimado:** 14 Story Points.
+Con este primer Sprint se busca establecer la estructura inicial del sistema y su conexión con la base de datos.
 
-## 3. Definition of Ready (DoR)
+## 2. Historias Compromiso para el Sprint 1
 
-Una historia está lista para iniciar cuando:
+| ID | Historia de Usuario | Story Points | Responsable (Assignee) |
+|---|---|---|---|
+| HU-01 | Registro de usuario | 5 pts | Por asignar |
+| HU-02 | Inicio de sesión | 3 pts | Por asignar |
+| HU-03 | Registro de estadía profesional | 5 pts | Por asignar |
 
-* Tiene una descripción clara.
-* Cuenta con criterios de aceptación.
-* Tiene una estimación en Story Points.
-* Tiene prioridad definida.
-* El equipo entiende lo que se necesita realizar.
+**Duración propuesta:** 2 semanas.
 
-## 4. Definition of Done (DoD)
+**Total de Story Points:** 13.
 
-Una historia se considera terminada cuando:
+## 3. Acuerdos de Calidad Ágil
 
-* El desarrollo cumple con los criterios de aceptación.
-* Se realizaron pruebas básicas.
-* El código fue revisado por el equipo.
-* Los cambios fueron integrados correctamente en la rama correspondiente.
-* La documentación necesaria está actualizada.
+**Definition of Ready (DoR):**
 
-## 5. Organización del equipo
+Una historia de usuario podrá comenzar a desarrollarse cuando tenga una descripción clara, criterios de aceptación definidos, estimación en Story Points y un responsable asignado.
 
-* **Product Owner:** define y prioriza las necesidades del sistema.
-* **Desarrollador:** implementa las historias seleccionadas.
-* **Scrum Master:** apoya al equipo para seguir el proceso Scrum y resolver impedimentos.
+**Definition of Done (DoD):**
 
-## 6. Resultado esperado
+Una historia se considerará terminada cuando su funcionalidad esté programada, se hayan realizado las pruebas correspondientes, no presente errores conocidos que impidan su funcionamiento y sus cambios hayan sido revisados mediante un Pull Request.
 
-Al finalizar el Sprint 1, se espera contar con las funciones de registro, inicio de sesión, consulta de información y consulta del perfil, de acuerdo con sus criterios de aceptación.
+## 4. Actividades del Sprint
+
+1. Diseñar las pantallas de registro e inicio de sesión.
+2. Crear la estructura inicial de la base de datos.
+3. Programar el registro de usuarios.
+4. Implementar el inicio de sesión.
+5. Desarrollar el formulario para registrar estadías profesionales.
+6. Realizar pruebas de funcionamiento y corregir errores.
