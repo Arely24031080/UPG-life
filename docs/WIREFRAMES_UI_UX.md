@@ -12,6 +12,10 @@ Se propone una interfaz sencilla y organizada para facilitar el uso de la plataf
 
 ## 2. Pantalla de Inicio de Sesión
 
+### Diseño de la pantalla
+
+![Pantalla de inicio de sesión](../wireframes/login.png)
+
 Esta pantalla permitirá que los usuarios ingresen utilizando su correo institucional y la contraseña creada para el sistema.
 
 ### Elementos de la Pantalla
@@ -32,6 +36,31 @@ El usuario ingresa su correo institucional y contraseña.
 El sistema valida los datos y permite ingresar al panel correspondiente, dependiendo de si es estudiante o asesor.
 
 ## 3. Panel Principal del Estudiante
+
+### Wireframe del Panel del Estudiante
+
+| Menú de navegación | Panel principal |
+|---|---|
+| Inicio | Bienvenido, estudiante |
+| Mi estadía | Empresa y proyecto registrados |
+| Actividades | Consulta de actividades |
+| Evidencias | Reportes y documentos entregados |
+| Cerrar sesión | Estado de las entregas |
+
+### Distribución de la Pantalla
+
+El diseño tendrá un encabezado con el nombre del sistema.
+
+En la parte izquierda se encontrará un menú de navegación
+con las funciones disponibles para el estudiante.
+
+En la parte central se mostrará la información de su estadía,
+las actividades registradas y sus evidencias.
+
+El objetivo es que el estudiante pueda consultar sus avances
+de manera sencilla y organizada.
+
+**Estado:** Diseño propuesto, pendiente de implementación.
 
 Esta pantalla mostrará las funciones disponibles para el estudiante.
 
@@ -91,6 +120,38 @@ El sistema valida el archivo, guarda su información y lo deja pendiente de revi
 
 ## 6. Panel del Asesor Académico
 
+### Wireframe del Panel del Asesor Académico
+
+| Menú de navegación | Panel principal |
+|---|---|
+| Inicio | Bienvenido, asesor |
+| Estudiantes | Lista de estudiantes asignados |
+| Actividades | Consulta de bitácoras |
+| Evidencias | Documentos pendientes de revisión |
+| Revisiones | Historial de aprobaciones y correcciones |
+| Cerrar sesión | Salir del sistema |
+
+### Distribución de la Pantalla
+
+El panel del asesor tendrá un encabezado con el nombre
+del sistema y un menú de navegación en la parte izquierda.
+
+En la parte central se mostrará la lista de estudiantes
+asignados y sus entregas pendientes.
+
+El asesor podrá seleccionar una evidencia, consultar
+el documento y escribir observaciones.
+
+También tendrá dos opciones principales:
+
+- Aprobar la evidencia.
+- Solicitar correcciones al estudiante.
+
+El objetivo es facilitar la revisión de los avances
+de las estadías profesionales.
+
+**Estado:** Diseño propuesto, pendiente de implementación.
+
 Esta pantalla permitirá que los asesores revisen las actividades y evidencias de sus estudiantes asignados.
 
 ### Elementos de la Pantalla
@@ -146,3 +207,14 @@ Para desarrollar las interfaces se considerarán los siguientes aspectos:
 Los wireframes permiten establecer la estructura inicial de las pantallas del sistema.
 
 Este diseño ayudará a organizar las funciones y facilitará el desarrollo de la interfaz web con HTML, CSS y Flask.
+
+## 10. Pantalla Principal del Sistema
+
+La página principal presenta el nombre del sistema y permite
+que los usuarios accedan al inicio de sesión o al registro.
+
+### Diseño de la pantalla
+
+![Página principal del sistema](../wireframes/inicio.png)
+
+Esta pantalla fue desarrollada utilizando HTML, CSS y Flask.
