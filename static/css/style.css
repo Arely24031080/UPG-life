@@ -1,0 +1,130 @@
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5fa;
+    color: #24334b;
+}
+
+/* Encabezado */
+header {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #dce8f7;
+}
+
+/* Contenido principal */
+main {
+    background-color: white;
+    max-width: 700px;
+    margin: 55px auto;
+    padding: 45px 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+    color: #17365d;
+}
+
+main p {
+    line-height: 1.7;
+}
+
+main h3 {
+    margin-top: 30px;
+}
+
+/* Botones */
+button {
+    background-color: #2765a8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 25px;
+    margin: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #17365d;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #66758b;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    main {
+        margin: 25px 15px;
+        padding: 30px 18px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
+
+/* Formulario de inicio de sesión */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 380px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    color: #17365d;
+}
+
+form input {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #2765a8;
+}
+
+form button {
+    margin: 12px 0 0;
+    width: 100%;
+}
+
+main a {
+    color: #2765a8;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}

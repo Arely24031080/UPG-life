@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estadías Profesionales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestión y Seguimiento de Estadías Profesionales</h1>
+        <p>Universidad Politécnica de Guanajuato</p>
+    </header>
+
+    <main>
+        <h2>Bienvenido al sistema</h2>
+        <p>
+            Plataforma para registrar, consultar y dar seguimiento
+            a las estadías profesionales de los estudiantes.
+        </p>
+
+        <h3>¿Qué deseas hacer?</h3>
+
+        <a href="{{ url_for('login') }}">
+    <button type="button">Iniciar sesión</button>
+        </a>
+        <button type="button">Registrarse</button>
+    </main>
+
+    <footer>
+        <p>Proyecto de Ingeniería de Software</p>
+    </footer>
+
+</body>
+</html>

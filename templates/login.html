@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Sistema de Estadías</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestión y Seguimiento de Estadías Profesionales</h1>
+        <p>Universidad Politécnica de Guanajuato</p>
+    </header>
+
+    <main>
+        <h2>Iniciar sesión</h2>
+        <p>Ingresa tus datos para acceder al sistema.</p>
+
+        <form method="POST">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo"
+                   placeholder="ejemplo@correo.com" required>
+
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena"
+                   placeholder="Ingresa tu contraseña" required>
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+        <p><a href="{{ url_for('inicio') }}">Volver al inicio</a></p>
+    </main>
+
+    <footer>
+        <p>Proyecto de Ingeniería de Software</p>
+    </footer>
+
+</body>
+</html>
