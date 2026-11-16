@@ -169,3 +169,192 @@ sequenceDiagram
 6. Si son incorrectos, se muestra un mensaje de error y no se permite ingresar.
 
 Este proceso permitirá controlar el acceso al sistema de acuerdo con el tipo de usuario.
+
+## 6. Diagrama de Secuencia: Registro de Estadía Profesional
+
+Este diagrama representa el proceso mediante el cual un estudiante registra la información de su estadía profesional.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor E as Estudiante
+    participant W as Página Web
+    participant F as Servidor Flask
+    participant BD as Base de Datos
+
+    E->>W: Ingresa datos de la estadía
+    W->>F: Envía formulario
+    F->>F: Valida datos y permisos
+
+    alt Datos correctos
+        F->>BD: Guarda información de la estadía
+        BD-->>F: Confirma registro
+        F-->>W: Registro exitoso
+        W-->>E: Muestra confirmación
+    else Datos incorrectos
+        F-->>W: Devuelve errores de validación
+        W-->>E: Solicita corregir información
+    end
+```
+
+### Descripción
+
+1. El estudiante inicia sesión y abre el formulario de registro.
+2. Ingresa los datos de la empresa, proyecto y asesor.
+3. La página envía la información al servidor Flask.
+4. El servidor verifica que los campos estén completos y que el usuario tenga permiso.
+5. Si la información es válida, se guarda en SQLite.
+6. El sistema muestra un mensaje de confirmación.
+
+**Requisito relacionado:** RF-03.
+
+**Caso de uso relacionado:** CU-03.
+
+## 7. Diagrama de Secuencia: Revisión de Evidencias
+
+Este diagrama representa el proceso mediante el cual un asesor académico revisa y evalúa las evidencias entregadas por un estudiante.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor A as Asesor Académico
+    participant W as Página Web
+    participant F as Servidor Flask
+    participant BD as Base de Datos
+
+    A->>W: Selecciona una evidencia
+    W->>F: Solicita información
+    F->>BD: Consulta evidencia y asignación
+    BD-->>F: Devuelve información
+    F->>F: Verifica permisos del asesor
+
+    alt Asesor autorizado
+        F-->>W: Muestra evidencia
+        A->>W: Aprueba o solicita corrección
+        W->>F: Envía resultado y observaciones
+        F->>BD: Guarda revisión y actualiza estado
+        BD-->>F: Confirma actualización
+        F-->>W: Revisión registrada
+        W-->>A: Muestra confirmación
+    else Sin autorización
+        F-->>W: Acceso denegado
+        W-->>A: Muestra mensaje de error
+    end
+```
+
+### Descripción
+
+1. El asesor inicia sesión en el sistema.
+2. Selecciona una evidencia de un estudiante asignado.
+3. El servidor consulta los datos y verifica que el asesor tenga autorización.
+4. El asesor revisa el documento.
+5. Puede aprobar la entrega o solicitar correcciones.
+6. El sistema registra las observaciones y actualiza el estado de la evidencia.
+7. Finalmente, muestra un mensaje de confirmación.
+
+**Requisito relacionado:** RF-06.
+
+**Caso de uso relacionado:** CU-06.
+
+## 8. Diagrama de Secuencia: Registro de Usuario
+
+Este diagrama muestra cómo un estudiante puede crear una cuenta en el sistema utilizando su correo institucional y una contraseña propia de la plataforma.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor E as Estudiante
+    participant W as Página Web
+    participant F as Servidor Flask
+    participant BD as Base de Datos
+
+    E->>W: Ingresa datos de registro
+    W->>F: Envía formulario
+    F->>F: Valida información
+    F->>BD: Consulta correo institucional
+    BD-->>F: Devuelve resultado
+
+    alt Correo disponible y datos válidos
+        F->>F: Genera hash de contraseña
+        F->>BD: Guarda nuevo usuario
+        BD-->>F: Confirma registro
+        F-->>W: Registro exitoso
+        W-->>E: Muestra confirmación
+    else Correo duplicado o datos incorrectos
+        F-->>W: Devuelve error
+        W-->>E: Solicita corregir datos
+    end
+```
+
+**Requisito relacionado:** RF-01.
+
+**Caso de uso relacionado:** CU-01.
+
+---
+
+## 9. Diagrama de Secuencia: Registro de Actividades
+
+Este diagrama representa cómo un estudiante registra las actividades realizadas durante su estadía profesional.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor E as Estudiante
+    participant W as Página Web
+    participant F as Servidor Flask
+    participant BD as Base de Datos
+
+    E->>W: Ingresa fecha y descripción
+    W->>F: Envía actividad
+    F->>F: Valida datos y permisos
+
+    alt Información correcta
+        F->>BD: Guarda actividad
+        BD-->>F: Confirma registro
+        F-->>W: Actividad registrada
+        W-->>E: Muestra confirmación
+    else Información incorrecta
+        F-->>W: Devuelve errores
+        W-->>E: Solicita corregir información
+    end
+```
+
+**Requisito relacionado:** RF-04.
+
+**Caso de uso relacionado:** CU-04.
+
+---
+
+## 10. Diagrama de Secuencia: Entrega de Evidencias
+
+Este diagrama representa el proceso mediante el cual un estudiante entrega documentos relacionados con sus actividades de estadía.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor E as Estudiante
+    participant W as Página Web
+    participant F as Servidor Flask
+    participant BD as Base de Datos
+    participant A as Almacenamiento
+
+    E->>W: Selecciona documento
+    W->>F: Envía archivo
+    F->>F: Valida usuario, formato y tamaño
+
+    alt Archivo permitido
+        F->>A: Guarda documento
+        A-->>F: Confirma almacenamiento
+        F->>BD: Registra evidencia
+        BD-->>F: Confirma registro
+        F-->>W: Entrega exitosa
+        W-->>E: Muestra confirmación
+    else Archivo no permitido
+        F-->>W: Devuelve mensaje de error
+        W-->>E: Solicita otro archivo
+    end
+```
+
+**Requisito relacionado:** RF-05.
+
+**Caso de uso relacionado:** CU-05.
