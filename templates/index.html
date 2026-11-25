@@ -1,0 +1,18 @@
+{% extends "base.html" %}{% block content %}
+<section class="hero">
+  <img class="campus-bg" src="{{ url_for('static', filename='img/campus-cortazar.svg') }}" alt="Ilustración del campus universitario">
+  <div class="hero-shade"></div>
+  <div class="hero-content"><span class="eyebrow">UNIVERSIDAD POLITÉCNICA DE GUANAJUATO · CORTAZAR</span>
+    <p class="hero-kicker">TU CAMINO PROFESIONAL COMIENZA AQUÍ</p>
+    <h1>Gestiona tu estadía.<br><em>Construye tu futuro.</em></h1>
+    <p>Una plataforma para organizar entregas, consultar fechas, registrar actividades y mantener comunicación con tu asesor académico.</p>
+    <div class="actions"><a class="btn" href="{{ url_for('login') }}">Ingresar como estudiante <span>↗</span></a><a class="btn btn-glass" href="{{ url_for('login_asesor') }}">Portal de asesores</a></div>
+  </div><img class="mascot-hero" src="{{ url_for('static', filename='img/camilo.png') }}" alt="Mascota de la universidad">
+  <div class="hero-index">UPG <span>·</span> ESTADÍAS</div>
+</section>
+<section class="welcome-row"><div><span class="eyebrow">UNA SOLA PLATAFORMA</span><h2>Todo el proceso, en un solo lugar.</h2></div><p>Desde el primer documento hasta la liberación de tu estadía, lleva un seguimiento claro y ordenado.</p></section>
+<section class="info-grid">
+ <article class="feature-card"><div class="feature-icon">01</div><h3>Portal de estudiantes</h3><p>Registra tu estadía, entrega documentos y actualiza tu bitácora de actividades.</p></article>
+ <article class="feature-card"><div class="feature-icon">02</div><h3>Portal de asesores</h3><p>Consulta a tus estudiantes asignados, revisa avances y establece fechas de entrega.</p></article>
+ <article class="feature-card"><div class="feature-icon">03</div><h3>Seguimiento claro</h3><p>Visualiza estados, observaciones y fechas importantes de cada entregable.</p></article>
+</section>{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Panel del estudiante | UPG{% endblock %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">PANEL DEL ESTUDIANTE</p><h1>Hola, {{ session.nombre }}</h1><p>Administra tu estadía y consulta tus avances.</p></div><a class="btn" href="{{ url_for('nueva_estadia') }}">+ Registrar estadía</a></div>
+{% if estadias %}
+<div class="table-wrap"><table><thead><tr><th>Empresa</th><th>Proyecto</th><th>Asesor</th><th>Estado</th><th></th></tr></thead><tbody>
+{% for e in estadias %}<tr><td>{{ e.empresa }}</td><td>{{ e.nombre_proyecto }}</td><td>{{ e.asesor_nombre or 'Sin asignar' }}</td><td><span class="status">{{ e.estado }}</span></td><td><a href="{{ url_for('detalle_estadia', estadia_id=e.id) }}">Ver detalle</a></td></tr>{% endfor %}
+</tbody></table></div>
+{% else %}<div class="empty card"><h2>Aún no tienes una estadía registrada</h2><p>Cuando registres tu información, aparecerá aquí.</p><a class="btn" href="{{ url_for('nueva_estadia') }}">Registrar mi estadía</a></div>{% endif %}
+{% endblock %}

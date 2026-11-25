@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Registro | UPG{% endblock %}
+{% block content %}
+<section class="form-card">
+  <h1>Crear cuenta de estudiante</h1>
+  <p>Usa tu correo institucional y crea una contraseña para esta plataforma. No es la contraseña de SIINE.</p>
+  <form method="post">
+    <label>Nombre completo</label><input name="nombre" required maxlength="120">
+    <label>Correo institucional</label><input type="email" name="correo" required>
+    <label>Contraseña</label><input type="password" name="password" minlength="8" required>
+    <label>Confirmar contraseña</label><input type="password" name="confirmar" minlength="8" required>
+    <button class="btn full" type="submit">Crear cuenta</button>
+  </form>
+  <p class="form-foot">¿Ya tienes cuenta? <a href="{{ url_for('login') }}">Inicia sesión</a></p>
+</section>
+{% endblock %}

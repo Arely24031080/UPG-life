@@ -1,0 +1,30 @@
+UPG-LIFE | SISTEMA DE GESTIÓN Y SEGUIMIENTO DE ESTADÍAS
+
+INSTALACIÓN
+1. Haz una copia de seguridad de tu proyecto y de database/estadias.db.
+2. Extrae el ZIP y copia su contenido dentro de tu carpeta UPG-life.
+3. Conserva .git, .venv, docs, wireframes y uploads. No reemplaces ni borres database/estadias.db.
+4. Abre la terminal en la carpeta del proyecto y activa: .venv\Scripts\Activate.ps1
+5. Instala dependencias: pip install -r requirements.txt
+6. Ejecuta: python app.py
+7. Abre http://127.0.0.1:5000
+
+PORTALES
+- Estudiante: /login
+- Asesor: /asesor/login
+La página principal muestra accesos separados.
+
+CUENTAS DE ASESORES
+Consulta INSTRUCCIONES_ASESORES.txt. Las cuentas se crean con flask --app app crear-asesor. El estudiante selecciona al asesor al registrar su estadía y así queda asignado al panel correspondiente.
+
+IMPORTANTE SOBRE SIINE
+El prototipo no está conectado a SIINE y no valida contraseñas de SIINE. Cada asesor utiliza una contraseña local creada para UPG-life. No uses ni almacenes contraseñas reales de SIINE. Para autenticación institucional se requiere integración autorizada por TI (SSO/OAuth/LDAP/API).
+
+DOCUMENTOS
+Se crean siete apartados por estadía: REVIN 01, Carta de aceptación, Cronograma de actividades, Primer avance, Segundo avance, Reporte final y Carta de liberación. El asesor establece fechas límite, revisa, aprueba o solicita cambios y registra observaciones. Estudiante y asesor pueden registrar actividades en la bitácora.
+
+IMÁGENES
+Consulta IMAGENES_CAMBIAR.txt. Reemplaza static/img/logo-upg.png y static/img/camilo.png por los archivos oficiales conservando exactamente esos nombres.
+
+SEGURIDAD
+Prototipo académico. Antes de producción se requieren autenticación institucional, HTTPS, SECRET_KEY segura, pruebas de seguridad, aviso de privacidad y respaldos.

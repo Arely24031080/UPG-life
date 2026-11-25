@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="form-card wide">
+<h1>Registrar estadía</h1>
+<form method="post">
+<label>Empresa o institución</label><input name="empresa" required>
+<label>Nombre del proyecto o área</label><input name="proyecto" required>
+<div class="form-row"><div><label>Fecha de inicio</label><input type="date" name="fecha_inicio" required></div><div><label>Fecha de término (opcional)</label><input type="date" name="fecha_fin"></div></div>
+<label>Asesor</label><select name="asesor_id"><option value="">Por asignar</option>{% for a in asesores %}<option value="{{ a.id }}">{{ a.nombre }}</option>{% endfor %}</select>
+<button class="btn full">Guardar estadía</button>
+</form></section>
+{% endblock %}

@@ -1,0 +1,11 @@
+CAMBIAR LAS IMÁGENES POR LAS OFICIALES
+
+1) LOGOTIPO: abre static/img/ y reemplaza logo-upg.png por el logo oficial de la UPG. Conserva exactamente el nombre logo-upg.png. Recomendación: PNG transparente o fondo blanco, horizontal.
+
+2) CAMILO: reemplaza static/img/camilo.png por la imagen oficial de Camilo. Conserva exactamente el nombre camilo.png. Recomendación: PNG con fondo transparente.
+
+3) FONDO DE PORTADA: la ilustración local del campus está en static/img/campus-cortazar.svg. Si quieres poner una fotografía real, guarda la foto como campus-cortazar.jpg en esa misma carpeta y cambia en templates/index.html la referencia img/campus-cortazar.svg por img/campus-cortazar.jpg.
+
+No es necesario cambiar app.py ni CSS para sustituir el logo o a Camilo. Si el nombre/extensión cambia, también debe cambiarse la ruta en templates/base.html (logo) o templates/index.html y templates/login.html (Camilo).
+
+Los archivos incluidos son recursos provisionales para el prototipo; no se presentan como identidad gráfica oficial.

@@ -1,0 +1,17 @@
+MEJORAS DEL SISTEMA UPG-LIFE
+
+- Portada con fotografía del campus (se carga desde una fuente externa).
+- Logotipo UPG en la barra superior.
+- Ilustración de ave correcaminos para acompañar la portada. Es una ilustración de apoyo generada para este prototipo, no el archivo oficial de la mascota.
+- Siete entregables fijos por estadía: REVIN 01, Carta de aceptación, Cronograma de actividades, Primer avance, Segundo avance, Reporte final y Carta de liberación.
+- El asesor asignado puede registrar una fecha límite por documento.
+- El estudiante puede subir o reemplazar el archivo de cada documento.
+- El asesor asignado puede aprobar o solicitar cambios y agregar observaciones.
+- Se muestra la fecha de entrega y la fecha de revisión.
+
+Fuentes visuales consultadas:
+- Fotografía del campus UPG publicada por Periódico Correo: https://periodicocorreo.com.mx/vida-publica/2024/may/22/que-carreras-hay-en-la-universidad-politecnica-de-guanajuato-99882.html
+- Logotipo UPG (imagen consultada): https://redredor.wixsite.com/redor
+- Sitio institucional UPG: https://upgto.edu.mx/
+
+Nota: La imagen de mascota es una ilustración de apoyo, no una reproducción oficial de Camilo. Para usar la mascota institucional exacta, reemplaza static/img/camilo-mascota.png por el archivo oficial autorizado.
