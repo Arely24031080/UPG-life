@@ -1,0 +1,10 @@
+IMAGENES DEL PROTOTIPO
+
+Todas las imágenes usadas por la interfaz están guardadas localmente en static/img para que no dependan de internet:
+- logo-upg.svg: identificador gráfico local inspirado en la paleta y el nombre institucional. No sustituye el archivo maestro oficial de identidad UPG.
+- camilo-mascota.png: ilustración de un correcaminos azul creada para este prototipo; no es una reproducción oficial de Camilo.
+- campus-cortazar.svg: ilustración decorativa de un edificio universitario. No es una fotografía real del campus.
+
+La página carga los archivos con url_for('static', filename='...'), por lo que Flask los sirve desde /static/img/.
+
+Para colocar fotografías oficiales reales o el archivo oficial de Camilo, sustituye los archivos de static/img conservando exactamente sus nombres o actualiza las rutas en templates/base.html y templates/index.html.

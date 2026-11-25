@@ -1,0 +1,32 @@
+PORTAL DE ASESORES Y CUENTAS
+
+ACCESOS
+- Estudiantes: /login
+- Asesores: /asesor/login
+- La pantalla de inicio tiene accesos separados.
+
+IMPORTANTE SOBRE SIINE
+Esta aplicación no está conectada a SIINE y no puede comprobar la contraseña real de SIINE. No solicites ni guardes contraseñas de SIINE aquí. Para el prototipo, el administrador crea una cuenta local para cada asesor con su correo institucional y una contraseña propia de UPG-life. Para usar inicio de sesión único real, la universidad debe proporcionar un mecanismo oficial de integración (SSO/OAuth/LDAP o API) y autorización de TI.
+
+CREAR ASESOR
+1. Abre terminal en la carpeta raíz del proyecto.
+2. Activa el entorno: .venv\Scripts\Activate.ps1
+3. Detén Flask si está corriendo: Ctrl+C
+4. Ejecuta: flask --app app crear-asesor
+5. Captura nombre, correo institucional y una contraseña propia de esta plataforma (mínimo 8 caracteres).
+6. Ejecuta: python app.py
+7. El asesor entra en /asesor/login.
+
+ASIGNACIÓN DE ESTUDIANTES
+Al registrar su estadía, el estudiante selecciona al asesor en el campo Asesor. La estadía aparecerá en el panel de ese asesor. Las cuentas de asesor deben crearse antes de que aparezcan en esa lista.
+
+PANEL DEL ASESOR
+- Ve las estadías que tienen su ID como asesor asignado.
+- Abre el seguimiento para revisar los siete documentos.
+- Define fechas límite de entrega.
+- Aprueba documentos o solicita cambios y deja observaciones.
+- Puede registrar actividades en la bitácora.
+- Puede actualizar el estado de la estadía.
+
+SEGURIDAD
+Este proyecto es académico. No usar credenciales SIINE reales ni información sensible de alumnos. Para producción se requiere SSO institucional, HTTPS, SECRET_KEY segura, controles de acceso revisados, respaldos y aviso de privacidad.

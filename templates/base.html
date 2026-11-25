@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b49">
+  <title>{% block title %}UPG | Estadías Profesionales{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="{{ url_for('inicio') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de la Universidad Politécnica de Guanajuato"><span><b>UPG</b><small>ESTADÍAS PROFESIONALES</small></span></a>
+  <nav class="main-nav">
+  {% if session.get('user_id') %}<a href="{{ url_for('panel') }}">Mi panel</a><span class="user-chip">{{ session.get('nombre') }} · {{ 'Asesor' if session.get('rol') == 'asesor' else 'Estudiante' }}</span><a class="nav-button" href="{{ url_for('logout') }}">Cerrar sesión</a>
+  {% else %}<a href="{{ url_for('login') }}">Estudiantes</a><a class="nav-button" href="{{ url_for('login_asesor') }}">Acceso asesores</a>{% endif %}
+  </nav>
+</header>
+<main class="container">
+  {% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}{% for category, message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}{% endif %}{% endwith %}
+  {% block content %}{% endblock %}
+</main>
+<footer><strong>Universidad Politécnica de Guanajuato</strong><span>Campus Cortazar · Sistema de Gestión y Seguimiento de Estadías Profesionales</span></footer>
+</body></html>
